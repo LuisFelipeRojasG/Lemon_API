@@ -130,10 +130,21 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = []
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# Add SPECTACULAR_SETTINGS
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Lemon Restaurant API',
+    'DESCRIPTION': 'API for Little Lemon restaurant',
+    'VERSION': '1.0.0',
 }
 
